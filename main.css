@@ -11,12 +11,16 @@ body {
 #container {
     border: 1px solid blue;
     background: rgb(241, 245, 125);
-    float: left;
-    top: 60px;
     text-indent: 0px;
     color: rgb(191, 83, 83);
     width: 100%;
     box-sizing: border-box;
+}
+
+#container::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 #container ul {
@@ -35,6 +39,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     padding: .3em 6px;
+    font-size: 16px;
 }
 
 #container li a:hover {
