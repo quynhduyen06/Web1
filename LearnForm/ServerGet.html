@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GET Example</title>
+
+    <script>
+        function getUrlVars() {
+            var vars = {};
+
+            window.location.href.replace(
+                /[?&]+([^=&]+)=([^&]*)/gi,
+                function (m, key, value) {
+                    vars[key] = value;
+                }
+            );
+
+            return vars;
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="" method="get">
+
+        <table border="1" cellpadding="0" cellspacing="0">
+
+            <tr>
+                <td>Nhập tên:</td>
+                <td>
+                    <input type="text" value="Obama" name="txtten">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Nhập Email:</td>
+                <td>
+                    <input type="email" value="Obama@gmail.com" name="txtemail">
+                </td>
+            </tr>
+
+        </table>
+
+        <input type="submit" value="Gửi thông tin">
+
+    </form>
+
+    <hr>
+
+    <script>
+        var ten = unescape(getUrlVars()["txtten"]);
+        var email = unescape(getUrlVars()["txtemail"]);
+
+        if (ten != undefined) {
+            document.write("Tên: " + ten + "<br>");
+            document.write("Email: " + email);
+        }
+    </script>
+
+</body>
+</html>
