@@ -1,34 +1,83 @@
 <html>
-    <head>
-        <title>Login System</title>
-    </head>
-    <body>
-        <form>
-            <h1>Login System</h1>
-            <table>
-                <tr>
-                    <td>
-                        <label for="username">Username:</label>
-                    </td>
-                    <td><input type="text" name="username" id="username"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="password">Password:</label>
-                    </td>
-                    <td><input type="password" name="password" id="password"></td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>
-                        <input type="checkbox" name="saveinfo" id="save_info">
-                        <label for="save_info">Save Login Information</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Login"></td>
-                </tr>
-            </table>
-        </form>
-    </body>
+<head>
+    <title>Login System</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .menu-frame {
+            position: relative;
+            height: 35px;
+            z-index: 9999;
+        }
+
+        .menu-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            border: 0;
+        }
+
+        .menu-frame:hover iframe {
+            height: 180px;
+        }
+
+        form {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu-frame">
+        <iframe
+            src="../index.html"
+            scrolling="no">
+        </iframe>
+    </div>
+
+    <form>
+        <h1>Login System</h1>
+
+        <table>
+            <tr>
+                <td>
+                    <label for="username">Username:</label>
+                </td>
+                <td>
+                    <input type="text" name="username" id="username">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="password">Password:</label>
+                </td>
+                <td>
+                    <input type="password" name="password" id="password">
+                </td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="checkbox" name="saveinfo" id="save_info">
+                    <label for="save_info">Save Login Information</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Login">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
 </html>
