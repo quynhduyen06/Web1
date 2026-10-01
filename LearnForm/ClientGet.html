@@ -1,17 +1,45 @@
 <html>
 <head>
     <title>ClientGet</title>
-    <link rel="stylesheet" href="../main.css">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .menu-frame {
+            position: relative;
+            height: 35px;
+            z-index: 9999;
+        }
+
+        .menu-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            border: 0;
+        }
+
+        .menu-frame iframe:hover {
+            height: 180px;
+        }
+
+        form {
+            margin: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <iframe
-        src="../index.html"
-        width="100%"
-        height="150"
-        frameborder="0"
-        scrolling="no">
-    </iframe>
+
+    <div class="menu-frame">
+        <iframe
+            src="../index.html"
+            scrolling="no">
+        </iframe>
+    </div>
 
     <form action="ServerGet.html" method="get">
 
